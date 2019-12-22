@@ -1,0 +1,28 @@
+ img {cursor:pointer;}
+    
+html {
+  background: rgb(0, 0, 0);
+}
+    .texto{
+  color: rgb(255, 255, 255);
+  font-family: 'Mansalva', cursive;
+}
+       .body {
+           padding-top: 1px;
+           padding-left: 17px;
+       }
+ body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgb(18, 138, 0);
+  padding: 0 20px 20px 20px;
+  border: 10px ridge white;
+}
+       img#coche1 {
+          position: absolute;
+       }
+      .zona_boton {
+        text-align: center;
+        width: 100%;
+        margin-top: 240px;
+      }
