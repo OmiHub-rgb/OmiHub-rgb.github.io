@@ -19,7 +19,13 @@ G
            padding-top: 1px;
            padding-left: 17px;
        }
-
+ body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgb(18, 138, 0);
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
        img#coche1 {
           position: absolute;
        }
@@ -34,20 +40,7 @@ G
     </head>
     <body>
     
-  <h1 class="texto">Ángulos de cámara:</h1> 
- <ul>
-      <li class="texto">Nombre: <input type="text" id="noun"></li>
-      <li class="texto">Adjective: <input type="text" id="adjective"></li>
-      <li class="texto">Someone's Name: <input type="text" id="person"></li>
-    </ul>
-     
-    <button id="lib-button">¡Completar formulario!</button>
-      
-    <p class="texto">Texto de ejemplo: 
-    <span id="story"></span>
-    </p>
-   
-
+  <h1 class="texto">Portadas favoritas de </h1> 
  
 <img src="https://vignette.wikia.nocookie.net/gearsofwar/images/8/87/Gears_of_War_2_Portada.png/revision/latest?cb=20160706021554&path-prefix=es" width="20%" onclick="cambiar(this);">
   
@@ -118,18 +111,30 @@ G
   
   
  //RECURSOS JS QUE UTILIZO PARA QUE FUNCIONE EL FORMULARIO:
-   var libButton = document.getElementById('lib-button');
-        var libIt = function() {
-        var storyDiv = document.getElementById("story");
-        var Noun = document.getElementById("noun");
-        var Adjective = document.getElementById("adjective");
-        var Someones = document.getElementById("person");
-        storyDiv.innerHTML = " ¡Hola! " + Noun.value+", espero que te guste mi página!!!! "  +Adjective.value+ " y me ofendí porque me puso verde y entonces " +Someones.value+ " se va como si fuera la víctima ";
-        };
-        libButton.addEventListener('click', libIt);
-        
-  
-	
+   let myButton = document.querySelector('button');
+let myHeading = document.querySelector('h1');
+
+function setUserName() {
+  let myName = prompt('Pon tu nombre por favor.');
+  if(!myName || myName === null) {
+    setUserName();
+  } else {
+    localStorage.setItem('name', myName);
+    myHeading.innerHTML = 'Portadas favoritas de ' + myName;
+  }
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  let storedName = localStorage.getItem('name');
+  myHeading.innerHTML = 'Portadas favoritas de ' + storedName;
+}
+
+myButton.onclick = function() {
+  setUserName();
+}
+//FIN DEL CÓDIGO DE: "RECURSOS JS QUE UTILIZO PARA QUE FUNCIONE EL FORMULARIO"
 	</script>
 
     </body>
