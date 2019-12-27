@@ -8,7 +8,7 @@ Este repositorio tiene la siguiente estructura:
 
 1 carpeta con el nombre de "scripts" (la cual debe tener un archivo que almacene los códigos js para la página)
 
-1 archivo que contenga la licencia de recurso no-software (CC) (en mi caso escogí la CCO 1.0 universal)
+1 archivo que contenga la licencia de recurso no-software (CC) (en mi caso escogí la CC0 1.0 universal)
 
 1 archivo "README.md" que se te dá la opción de añadirlo nada más comenzar el repositorio y que debe de explicar el contenido de la página.
 
